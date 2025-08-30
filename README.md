@@ -1,15 +1,21 @@
 # student-grade-calculator
 A Python program that calculates the average marks and assigns grades based on percentage. The program supports input and evaluation for multiple students.
+
 def grade_calculator(name):
+  
   subjects=['maths','english','urdu','computer','science','islamiat\\ethics','social studies']
   marks = []
   print(f"Enter marks of {name}")
+  
   for subject in subjects:
     mark=int(input(f"Enter marks of {subject}: "))
+    
     if mark > 100:
       print("invalid marks")
       mark=int(input(f"Enter marks of {subject}: "))
+    
     marks.append(mark)
+  
   print("Average: ", average(marks))
   print("Percentage: ", percentage(marks))
 
